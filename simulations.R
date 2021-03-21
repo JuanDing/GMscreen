@@ -19,39 +19,15 @@ clusterEvalQ(cl,library(fastglm))
 
 # generate simulation dataset, 
 d1 <-read.table('chr1.dat');
-d2 <-read.table('chr2.dat');
-d3 <-read.table('chr3.dat');
-d4 <-read.table('chr4.dat');
-d5 <-read.table('chr5.dat');
-d6 <-read.table('chr6.dat');
-d7 <-read.table('chr7.dat');d14 <-read.table('chr14.dat');
-d8 <-read.table('chr8.dat');d15 <-read.table('chr15.dat');
-d9 <-read.table('chr9.dat');d16 <-read.table('chr16.dat');
-d10 <-read.table('chr10.dat');d17 <-read.table('chr17.dat');
-d11 <-read.table('chr11.dat');d18 <-read.table('chr18.dat');
-d12 <-read.table('chr12.dat');d19 <-read.table('chr19.dat');
-d13 <-read.table('chr13.dat');d20 <-read.table('chr20.dat');
+
 
 
 set.seed(0)
-dd1 <- clean(d1,0.0009);dd11 <- clean(d11,0.0009);
-dd2 <- clean(d2,0.0009);dd12 <- clean(d12,0.0009);
-dd3 <- clean(d3,0.0009);dd13 <- clean(d13,0.0009);
-dd4 <- clean(d4,0.0009);dd14 <- clean(d14,0.0009);
-dd5 <- clean(d5,0.0009);dd15 <- clean(d15,0.0009);
-dd6 <- clean(d6,0.0009);dd16 <- clean(d16,0.0009);
-dd7 <- clean(d7,0.0009);dd17 <- clean(d17,0.0009);
-dd8 <- clean(d8,0.0009);dd18 <- clean(d18,0.0009);
-dd9 <- clean(d9,0.0009);dd19 <- clean(d19,0.0009);
-dd10 <- clean(d10,0.0009);dd20 <- clean(d20,0.0009);
-
+dd0 <- clean(d1,0.0009)
 # clean data, drop those SNP with minor allele frequency <0.03; 
 # made the coding as follows: 2: AA, 1:Aa, 0:aa. A is the minor allele frequency
 
-dd0 = cbind(dd1,dd2,dd3,dd4,dd5,dd6,dd7,dd8,dd9,dd10,dd11,dd12,dd13,dd14,dd15,dd16,dd17,dd18,dd19,dd20)
 
-
-# dd0
 
 M=1000;    
 n <- 3000;
